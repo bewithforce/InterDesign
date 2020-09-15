@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails InterDesign: default" uuid="088315dc-ad19-4868-91ba-b778a6595113">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/InterDesign</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails InterDesign: production" uuid="0be94640-feab-475e-a93c-783b25eb57db">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/InterDesign</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails InterDesign: development" uuid="19bbcec2-7b30-4011-80c0-3a35025fa09f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/InterDesign</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails InterDesign: test" uuid="01145fc2-715f-4af2-b354-a44ac485d045">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/InterDesign</jdbc-url>
+    </data-source>
+  </component>
+</project>
