@@ -1,12 +1,12 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
     Route,
     Switch,
     Redirect,
-    useHistory
+    useHistory,
+    BrowserRouter as Router,
 } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "../components/Home";
 import About from "../components/About"
 import Component404 from "../components/404"
@@ -19,7 +19,7 @@ function Routes() {
     return (
         <Router>
             <Header/>
-            <div className="primary-color d-flex align-items-center justify-content-center real_body">
+            <div className="just_for_test">
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/about" exact component={About}/>
@@ -27,7 +27,7 @@ function Routes() {
                     <Redirect from='*' to='/404'/>
                 </Switch>
             </div>
-            {Footer}
+            <Footer/>
         </Router>
     );
 }

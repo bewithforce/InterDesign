@@ -11,7 +11,7 @@ import Footer from "../components/common/Footer";
 
 document.addEventListener("DOMContentLoaded", () => {
     let newDiv = document.createElement("div");
-    newDiv.classList.add('vh-100', 'vw-100')
+    //newDiv.classList.add('vh-100', 'vw-100')
     render(
         <App/>,
         document.body.appendChild(newDiv)
