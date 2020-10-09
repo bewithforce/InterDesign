@@ -34,7 +34,9 @@ class Home extends React.Component {
         if(checked){
             this.setState(prevState => { prevState.filters.push(name)})
         } else {
-            this.setState(prevState => { prevState.filters.delete(name)})
+            this.setState(prevState => {
+                prevState.filters.splice(prevState.filters.indexOf(name), 1)
+            })
         }
 
     }
