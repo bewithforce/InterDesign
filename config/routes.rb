@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     end
   end
   root 'main#index'
-  get '/*path' => 'main#index'
+  # get '/*path' => 'main#index'
 end
