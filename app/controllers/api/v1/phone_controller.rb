@@ -7,7 +7,7 @@ class Api::V1::PhoneController < ApplicationController
     csv = CSV.parse(csv_text, :headers => true)
     settings_text = File.read('public/configs.json')
     settings = JSON.parse(settings_text)
-
+    csv
 
   end
 end
