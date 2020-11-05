@@ -1,2 +1,2 @@
-class FamilyPhoto < ApplicationRecordgi
+class FamilyPhoto < ApplicationRecord
 end
