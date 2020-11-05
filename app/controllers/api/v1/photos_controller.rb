@@ -16,4 +16,7 @@ class Api::V1::PhotosController < ApplicationController
     }
     render json: family_photos
   end
+
+  def add
+  end
 end

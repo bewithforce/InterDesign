@@ -1,0 +1,28 @@
+{
+  "settings": [
+    {
+      "key": 1,
+      "primary": 2,
+      "access": [
+        2,
+        3
+      ]
+    },
+    {
+      "key": 2,
+      "primary": 2,
+      "access": [
+        2,
+        3
+      ]
+    },
+    {
+      "key": 3,
+      "primary": 2,
+      "access": [
+        2,
+        3
+      ]
+    }
+  ]
+}

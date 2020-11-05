@@ -12,11 +12,11 @@ function Header(props){
             </div>
             <div className="header__navigation">
                 <NavLink
-                    to="/about"
+                    to="/family"
                     className="header__button"
                     role="button"
                 >
-                    About
+                    Family
                 </NavLink>
             </div>
         </header>
