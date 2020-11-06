@@ -33,7 +33,7 @@ class Api::V1::PhoneController < ApplicationController
     to_return = {'data': []}
     if selected_row.length() != 0
       access.each do |n|
-        to_return[:return].push(selected_row[n])
+        to_return[:data].push(selected_row[n])
       end
     end
 
