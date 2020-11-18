@@ -2,8 +2,7 @@ require 'csv'
 require 'json'
 require 'aws-sdk-s3'
 
-class Api::V1::PhoneController < ApplicationController
-    skip_before_action :verify_authenticity_token
+class Api::V1::OldPhoneController < ApplicationController
 
     def initialize
         super
@@ -18,17 +17,20 @@ class Api::V1::PhoneController < ApplicationController
         key = params[:key]
         value = params[:value]
 
-        settings = JSON.parse(@s3.get_object(bucket: 'inter-design', key: 'configs.json').body.read)
-
-        # puts settings
-
-        settings = settings.select { |e|
-            puts e['key']
-            e['key'].to_s == key.to_s
+        keys = JSON.parse(@s3.get_object(bucket: 'inter-design', key: 'keys.json').body.read)
+        keys = keys.select { |e|
+            e['phoneNumber'].to_s.include? key.to_s
         }
+        if keys.length == 0
+            render json: {}
+            return
+        end
+        group = keys[0]['group']
 
-        #puts settings
-
+        settings = JSON.parse(@s3.get_object(bucket: 'inter-design', key: 'configs.json').body.read)
+        settings = settings.select { |e|
+            e['group'].to_s == group.to_s
+        }
         if settings.length == 0
             render json: {}
             return
@@ -62,21 +64,4 @@ class Api::V1::PhoneController < ApplicationController
         render json: to_return
     end
 
-    def save_settings
-        new_settings = params[:_json].as_json.to_json
-        @s3.delete_object(bucket: 'inter-design', key: 'configs.json')
-        @s3.put_object(bucket: 'inter-design', key: 'configs.json', body: new_settings)
-    end
-
-    def load_settings
-        settings = @s3.get_object(bucket: 'inter-design', key: 'configs.json').body.read
-        render json: settings
-    end
-
-    def save_file
-        new_file = params[:csv]
-        puts new_file.class
-        @s3.delete_object(bucket: 'inter-design', key: 'table.csv')
-        @s3.put_object(bucket: 'inter-design', key: 'table.csv', body: new_file)
-    end
 end
